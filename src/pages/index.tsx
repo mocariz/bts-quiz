@@ -1,6 +1,6 @@
 import styled from      'styled-components'
 
-import db from '../../db.json'
+import db from    '../../db.json'
 import Widget from '../components/Widget/styled'
 import QuizLogo from '../components/QuizLogo'
 import QuizBackground from '../components/QuizBackground/styled'
