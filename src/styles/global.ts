@@ -10,6 +10,8 @@ const GlobalStyle = createGlobalStyle`
     display: flex;
     flex-direction: column;
     font-family: 'Lato', sans-serif;
+    font-size: 14px;
+    line-height: 17px;
     background-color: ${({ theme }) => theme.colors.bodyBg};
     color: ${({ theme }) => theme.colors.textColor};
   }

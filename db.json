@@ -28,6 +28,7 @@
       "mainBg": "#130613",
       "bodyBg": "#0C0B0B",
       "textColor": "#FFFFFF",
+      "option": "#2E0D2E",
       "wrong": "#CB0000",
       "success": "#4CAF50"
     },

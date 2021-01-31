@@ -11,6 +11,9 @@ export const Button = styled.button`
   outline: none;
   cursor: pointer;
   border: none;
+  text-transform: uppercase;
+  letter-spacing: 1.25px;
+  font-weight: bold;
 
   &:disabled {
     background: #979797;

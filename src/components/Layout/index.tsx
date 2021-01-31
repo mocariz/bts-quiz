@@ -2,7 +2,7 @@ import React from 'react'
 import Head from 'next/head'
 
 import Logo from './Logo'
-import Footer from '../Footer'
+import Footer from './Footer'
 import GitHubCorner from '../GitHubCorner'
 
 import * as S from './styles'

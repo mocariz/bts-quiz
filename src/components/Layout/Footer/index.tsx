@@ -1,15 +1,12 @@
 import styled from 'styled-components'
+import Image from 'next/image'
 
 const FooterWrapper = styled.footer`
-  background-color: #00000070;
   padding: 20px;
   display: flex;
   align-items: center;
   border-radius: 4px;
-  img {
-    width: 58px;
-    margin-right: 23px;
-  }
+  justify-content: space-between;
   a {
     color: white;
     text-decoration: none;
@@ -21,6 +18,10 @@ const FooterWrapper = styled.footer`
     span {
       text-decoration: underline;
     }
+
+    &:first-child {
+      margin-right: 20px;
+    }
   }
 `
 
@@ -28,9 +29,11 @@ const Footer = () => {
   return (
     <FooterWrapper>
       <a href="https://www.alura.com.br/">
-        <img
+        <Image
           src="https://www.alura.com.br/assets/img/alura-logo-white.1570550707.svg"
           alt="Logo Alura"
+          width={90}
+          height={60}
         />
       </a>
       <p>
