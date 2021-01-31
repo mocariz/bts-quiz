@@ -3,7 +3,7 @@ import styled from 'styled-components'
 export const Wrapper = styled.div`
   width: 100%;
   background-size: cover;
-  background-position: center;
+  background-position: bottom right;
   background-image: url(${({ backgroundImage }) => backgroundImage});
   background-color: ${({ theme }) => theme.colors.bodyBg};
   flex: 1;
@@ -12,7 +12,7 @@ export const Wrapper = styled.div`
     &:after {
       content: '';
       background-size: cover;
-      background-position: center;
+      background-position: bottom right;
       background-image: linear-gradient(
           transparent,
           ${({ theme }) => theme.colors.bodyBg}
