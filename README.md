@@ -2,6 +2,8 @@
 
 This project is a simple quiz about Korean Boy Group BTS made with [Next.js](https://nextjs.org/).
 
+Figma: https://www.figma.com/file/bLxcziFogW6OzINufDuMdm/BTS-Quiz?node-id=12929%3A286
+
 ## What is inside?
 
 This project uses lot of stuff as:

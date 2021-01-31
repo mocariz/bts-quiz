@@ -40,10 +40,10 @@ const SVGWrapper = styled.svg`
   }
 `
 
-const GitHubCorner = ({ projectUrl }: { projectUrl: string }) => {
+const GitHubCorner = () => {
   return (
     <Wrapper>
-      <a href={projectUrl} target="_blank" rel="noreferrer">
+      <a href="https://github.com/mocariz" target="_blank" rel="noreferrer">
         <SVGWrapper
           className="githubCorner"
           width="80"
