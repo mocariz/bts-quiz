@@ -5,7 +5,7 @@ import Logo from './Logo'
 import Footer from '../Footer'
 import GitHubCorner from '../GitHubCorner'
 
-import * as S from './style'
+import * as S from './styles'
 
 export interface ComponentProps {
   title: string

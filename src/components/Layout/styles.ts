@@ -5,7 +5,7 @@ export const Wrapper = styled.div`
   background-size: cover;
   background-position: center;
   background-image: url(${({ backgroundImage }) => backgroundImage});
-  background-color: ${({ theme }) => theme.colors.mainBg};
+  background-color: ${({ theme }) => theme.colors.bodyBg};
   flex: 1;
   @media screen and (max-width: 500px) {
     background-image: none;
@@ -15,7 +15,7 @@ export const Wrapper = styled.div`
       background-position: center;
       background-image: linear-gradient(
           transparent,
-          ${({ theme }) => theme.colors.mainBg}
+          ${({ theme }) => theme.colors.bodyBg}
         ),
         url(${({ backgroundImage }) => backgroundImage});
       display: block;

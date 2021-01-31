@@ -1,17 +1,18 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useRouter } from 'next/router'
 
 import db from '../../db.json'
 
 import Layout from '../components/Layout'
 import Widget from '../components/Widget/styled'
+import Button from '../components/Button'
 
 const Home = () => {
   const router = useRouter()
-  const [name, setName] = React.useState('')
+  const [name, setName] = useState('')
 
   return (
-    <Layout backgroundImage={db.bg} title="AluraQuiz - Modelo Base">
+    <Layout backgroundImage={db.bg} title="BTS Quiz">
       <Widget>
         <Widget.Header>
           <h1>{db.title}</h1>
@@ -35,10 +36,7 @@ const Home = () => {
               }}
               placeholder="Diz ai seu nome"
             />
-            <button type="submit" disabled={name.length === 0}>
-              Jogar
-              {name}
-            </button>
+            <Button type="submit" disabled={name.length === 0} text="Jogar" />
           </form>
         </Widget.Content>
       </Widget>
