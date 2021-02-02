@@ -5,6 +5,7 @@ import db from '../../db.json'
 import Layout from '../components/Layout'
 import Loading from '../components/Loading'
 import QuestionWidget from '../components/QuestionWidget'
+import ResultWidget from '../components/ResultWidget'
 
 const screenStates = {
   QUIZ: 'QUIZ',
@@ -15,6 +16,7 @@ const screenStates = {
 const Page = () => {
   const [currentQuestion, setCurrentQuestion] = useState(0)
   const [screenState, setScreenState] = useState(screenStates.LOADING)
+  const [results, setResults] = useState([])
   const questionIndex = currentQuestion
   const totalQuestions = db.questions.length
   const question = db.questions[questionIndex]
@@ -40,6 +42,10 @@ const Page = () => {
     }
   }
 
+  const addResult = (value: boolean) => {
+    setResults([...results, value])
+  }
+
   return (
     <Layout
       backgroundImage={db.bg}
@@ -51,6 +57,7 @@ const Page = () => {
           question={question}
           questionIndex={questionIndex}
           totalQuestions={totalQuestions}
+          addResult={addResult}
           onSubmit={handleSubmitQuiz}
         />
       )}
@@ -58,7 +65,7 @@ const Page = () => {
       {screenState === screenStates.LOADING && <Loading />}
 
       {screenState === screenStates.RESULT && (
-        <div>Você acertou X questões, parabéns!</div>
+        <ResultWidget title="Tela de Resultado:" results={results} />
       )}
     </Layout>
   )

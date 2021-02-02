@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import * as S from './styled'
 
 import Widget from '../Widget'
@@ -15,15 +15,33 @@ export interface ComponentProps {
   questionIndex: number
   totalQuestions: number
   onSubmit: () => void
+  addResult: (value: boolean) => void
 }
 
 const QuestionWidget = ({
   question,
   questionIndex,
   totalQuestions,
+  addResult,
   onSubmit
 }: ComponentProps) => {
+  const [selectedAlternative, setSelectedAlternative] = useState(undefined)
+  const [isQuestionSubmited, setIsQuestionSubmited] = useState(false)
   const questionId = `question__${questionIndex}`
+  const isCorrect = selectedAlternative === question.answer
+  const hasAlternativeSelected = selectedAlternative !== undefined
+
+  const handleSubmit = (event: any) => {
+    event.preventDefault()
+    setIsQuestionSubmited(true)
+    setTimeout(() => {
+      addResult(isCorrect)
+      setIsQuestionSubmited(false)
+      setSelectedAlternative(undefined)
+      onSubmit()
+    }, 3 * 500)
+  }
+
   return (
     <Widget
       title={`Pergunta ${questionIndex + 1} de ${totalQuestions}`}
@@ -42,28 +60,39 @@ const QuestionWidget = ({
         <h2>{question.title}</h2>
         <p>{question.description}</p>
 
-        <form
-          onSubmit={(infosDoEvento) => {
-            infosDoEvento.preventDefault()
-            onSubmit()
-          }}
-        >
+        <S.Form onSubmit={handleSubmit}>
           {question.alternatives.map((alternative, alternativeIndex) => {
             const alternativeId = `alternative__${alternativeIndex}`
+            const alternativeStatus = isCorrect ? 'SUCCESS' : 'ERROR'
+            const isSelected = selectedAlternative === alternativeIndex
+
             return (
               <S.Option
                 as="label"
                 htmlFor={alternativeId}
                 key={alternativeIndex}
+                data-selected={isSelected}
+                data-status={isQuestionSubmited && alternativeStatus}
+                disabled={isQuestionSubmited}
               >
-                <input id={alternativeId} name={questionId} type="radio" />
+                <input
+                  id={alternativeId}
+                  name={questionId}
+                  type="radio"
+                  disabled={isQuestionSubmited}
+                  onChange={() => setSelectedAlternative(alternativeIndex)}
+                />
                 {alternative}
               </S.Option>
             )
           })}
 
-          <Button type="submit" text="Confirmar" />
-        </form>
+          <Button
+            type="submit"
+            text="Confirmar"
+            disabled={!hasAlternativeSelected || isQuestionSubmited}
+          />
+        </S.Form>
       </S.Wrapper>
     </Widget>
   )
