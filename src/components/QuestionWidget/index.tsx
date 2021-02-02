@@ -84,7 +84,7 @@ const QuestionWidget = ({
                   name={questionId}
                   type="radio"
                   disabled={isQuestionSubmited}
-                  onChange={() => setSelectedAlternative(alternativeIndex)}
+                  onClick={() => setSelectedAlternative(alternativeIndex)}
                 />
                 {alternative}
               </S.Option>
