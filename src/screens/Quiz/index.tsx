@@ -1,11 +1,14 @@
 import React, { useEffect, useState } from 'react'
 
-import db from '../../db.json'
+import Layout from '../../components/Layout'
+import Loading from '../../components/Loading'
+import QuestionWidget from '../../components/QuestionWidget'
+import ResultWidget from '../../components/ResultWidget'
 
-import Layout from '../components/Layout'
-import Loading from '../components/Loading'
-import QuestionWidget from '../components/QuestionWidget'
-import ResultWidget from '../components/ResultWidget'
+export interface ComponentProps {
+  externalQuestions: any
+  externalBg: string
+}
 
 const screenStates = {
   QUIZ: 'QUIZ',
@@ -13,13 +16,13 @@ const screenStates = {
   RESULT: 'RESULT'
 }
 
-const Page = () => {
+const Page = ({ externalQuestions, externalBg }: ComponentProps) => {
   const [currentQuestion, setCurrentQuestion] = useState(0)
   const [screenState, setScreenState] = useState(screenStates.LOADING)
   const [results, setResults] = useState([])
   const questionIndex = currentQuestion
-  const totalQuestions = db.questions.length
-  const question = db.questions[questionIndex]
+  const totalQuestions = externalQuestions.length
+  const question = externalQuestions[questionIndex]
 
   // [React chama de: Efeitos || Effects]
   // React.useEffect
@@ -47,7 +50,7 @@ const Page = () => {
   }
 
   return (
-    <Layout backgroundImage={db.bg} mobileBackgroundImage={db.bgMobile}>
+    <Layout backgroundImage={externalBg} mobileBackgroundImage={externalBg}>
       {screenState === screenStates.QUIZ && (
         <QuestionWidget
           question={question}

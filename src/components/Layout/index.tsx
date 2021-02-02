@@ -8,7 +8,6 @@ import GitHubCorner from '../GitHubCorner'
 import * as S from './styles'
 
 export interface ComponentProps {
-  title: string
   backgroundImage: string
   mobileBackgroundImage?: string
   children: any
@@ -21,7 +20,7 @@ const Container = (props: ComponentProps) => {
       mobileBackgroundImage={props.mobileBackgroundImage}
     >
       <Head>
-        <title>{props.title}</title>
+        <title>BTS Quiz</title>
       </Head>
       <S.Container>
         <Logo />

@@ -63,16 +63,19 @@ export const Container = styled.div`
     .content {
       height: 90vh;
       overflow: auto;
+      max-width: 360px;
+      padding: 0 5px;
 
       &::-webkit-scrollbar-track {
         -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
         background-color: ${({ theme }) => theme.colors.mainBg};
         border-radius: 10px;
+        margin-top: 15px;
       }
 
       &::-webkit-scrollbar {
         width: 5px;
-        background-color: ${({ theme }) => theme.colors.mainBg};
+        //background-color: ${({ theme }) => theme.colors.mainBg};
         border-radius: 10px;
       }
 

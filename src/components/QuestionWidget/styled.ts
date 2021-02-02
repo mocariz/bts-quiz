@@ -33,7 +33,8 @@ export const Option = styled.a`
   outline: 0;
   text-decoration: none;
   color: ${({ theme }) => theme.colors.contrastText};
-  background-color: ${({ theme }) => `${theme.colors.option}`};
+  background-color: ${({ theme }) =>
+    theme.colors.option ? theme.colors.option : `${theme.colors.primary}40`};
   padding: 10px 15px;
   margin-bottom: 8px;
   cursor: pointer;
@@ -48,5 +49,10 @@ export const Option = styled.a`
 
   input {
     display: none;
+  }
+
+  a {
+    text-decoration: none;
+    color: ${({ theme }) => theme.colors.contrastText};
   }
 `
