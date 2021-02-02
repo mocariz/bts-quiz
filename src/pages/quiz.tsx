@@ -41,7 +41,11 @@ const Page = () => {
   }
 
   return (
-    <Layout backgroundImage={db.bg} title="BTS Quiz">
+    <Layout
+      backgroundImage={db.bg}
+      mobileBackgroundImage={db.bgMobile}
+      title="BTS Quiz"
+    >
       {screenState === screenStates.QUIZ && (
         <QuestionWidget
           question={question}

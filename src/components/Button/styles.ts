@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 export const Button = styled.button`
   background: #e91e63;
-  color: ${({ theme }) => theme.colors.textColor};
+  color: ${({ theme }) => theme.colors.contrastText};
   width: 100%;
   height: 36px;
 

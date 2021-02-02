@@ -10,19 +10,25 @@ import * as S from './styles'
 export interface ComponentProps {
   title: string
   backgroundImage: string
+  mobileBackgroundImage?: string
   children: any
 }
 
 const Container = (props: ComponentProps) => {
   return (
-    <S.Wrapper backgroundImage={props.backgroundImage}>
+    <S.Wrapper
+      backgroundImage={props.backgroundImage}
+      mobileBackgroundImage={props.mobileBackgroundImage}
+    >
       <Head>
         <title>{props.title}</title>
       </Head>
       <S.Container>
         <Logo />
-        {props.children}
-        <Footer />
+        <div className="content">
+          {props.children}
+          <Footer />
+        </div>
       </S.Container>
 
       <GitHubCorner />

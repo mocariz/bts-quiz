@@ -1,12 +1,16 @@
 import styled from 'styled-components'
 
-export const Wrapper = styled.div`
+export const Wrapper = styled.div<{
+  backgroundImage: string
+  mobileBackgroundImage?: string
+}>`
   width: 100%;
+  height: 100vh;
   background-size: cover;
   background-position: bottom right;
   background-image: url(${({ backgroundImage }) => backgroundImage});
-  background-color: ${({ theme }) => theme.colors.bodyBg};
-  flex: 1;
+  background-color: ${({ theme }) => theme.colors.mainBg};
+
   @media screen and (max-width: 500px) {
     background-image: none;
     &:after {
@@ -14,10 +18,13 @@ export const Wrapper = styled.div`
       background-size: cover;
       background-position: bottom right;
       background-image: linear-gradient(
-          transparent,
-          ${({ theme }) => theme.colors.bodyBg}
+          transparent 50%,
+          ${({ theme }) => theme.colors.mainBg}
         ),
-        url(${({ backgroundImage }) => backgroundImage});
+        url(${(props) =>
+          props.mobileBackgroundImage
+            ? props.mobileBackgroundImage
+            : props.backgroundImage});
       display: block;
       width: 100%;
       height: 210px;
@@ -32,6 +39,12 @@ export const Wrapper = styled.div`
       z-index: 10;
     }
   }
+
+  // Large devices (desktops, 992px and up)
+  @media (min-width: 992px) {
+    max-height: 100vh;
+    overflow: hidden;
+  }
 `
 
 export const Container = styled.div`
@@ -42,5 +55,31 @@ export const Container = styled.div`
   @media screen and (max-width: 500px) {
     margin: auto;
     padding: 15px;
+    max-width: 100%;
+  }
+
+  // Large devices (desktops, 992px and up)
+  @media (min-width: 992px) {
+    .content {
+      height: 90vh;
+      overflow: auto;
+
+      &::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+        background-color: ${({ theme }) => theme.colors.mainBg};
+        border-radius: 10px;
+      }
+
+      &::-webkit-scrollbar {
+        width: 5px;
+        background-color: ${({ theme }) => theme.colors.mainBg};
+        border-radius: 10px;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background-color: ${({ theme }) => theme.colors.secondary};
+        border-radius: 10px;
+      }
+    }
   }
 `

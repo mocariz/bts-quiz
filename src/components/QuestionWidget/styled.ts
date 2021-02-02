@@ -11,7 +11,7 @@ export const Wrapper = styled.div`
 export const Option = styled.a`
   outline: 0;
   text-decoration: none;
-  color: ${({ theme }) => theme.colors.textColor};
+  color: ${({ theme }) => theme.colors.contrastText};
   background-color: ${({ theme }) => `${theme.colors.option}`};
   padding: 10px 15px;
   margin-bottom: 8px;

@@ -1,5 +1,6 @@
 {
   "bg": "https://i.imgur.com/I4DUH2d.png",
+  "bgMobile": "https://i.imgur.com/Jux6cva.png",
   "title": "BTS Quiz",
   "description": "Teste os seus conhecimentos sobre o BTS",
   "questions": [
@@ -25,9 +26,9 @@
   "theme": {
     "colors": {
       "primary": "#800080",
-      "mainBg": "#130613",
-      "bodyBg": "#0C0B0B",
-      "textColor": "#FFFFFF",
+      "secondary": "#130613",
+      "mainBg": "#0C0B0B",
+      "contrastText": "#FFFFFF",
       "option": "#2E0D2E",
       "wrong": "#CB0000",
       "success": "#4CAF50"

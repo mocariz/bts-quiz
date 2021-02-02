@@ -7,21 +7,14 @@ const GlobalStyle = createGlobalStyle`
   body {
     margin: 0;
     padding: 0;
-    display: flex;
-    flex-direction: column;
     font-family: 'Lato', sans-serif;
     font-size: 14px;
     line-height: 17px;
-    background-color: ${({ theme }) => theme.colors.bodyBg};
-    color: ${({ theme }) => theme.colors.textColor};
+    background-color: ${({ theme }) => theme.colors.mainBg};
+    color: ${({ theme }) => theme.colors.contrastText};
   }
   html, body {
-    min-height: 100vh;
-  }
-  #__next {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
+    height: 100vh;
   }
 `
 

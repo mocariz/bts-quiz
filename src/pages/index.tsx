@@ -22,7 +22,11 @@ const Home = () => {
   }
 
   return (
-    <Layout backgroundImage={db.bg} title="BTS Quiz">
+    <Layout
+      backgroundImage={db.bg}
+      mobileBackgroundImage={db.bgMobile}
+      title="BTS Quiz"
+    >
       <Widget title={db.title}>
         <p>{db.description}</p>
 
@@ -34,6 +38,26 @@ const Home = () => {
 
       <Widget>
         <h1>Quizes da galera</h1>
+        <p>
+          Dá uma olhada nesses quizes incríveis que o pessoal da Imersão Alguma
+          coisa fez:
+        </p>
+        <p>
+          Dá uma olhada nesses quizes incríveis que o pessoal da Imersão Alguma
+          coisa fez:
+        </p>
+        <p>
+          Dá uma olhada nesses quizes incríveis que o pessoal da Imersão Alguma
+          coisa fez:
+        </p>
+        <p>
+          Dá uma olhada nesses quizes incríveis que o pessoal da Imersão Alguma
+          coisa fez:
+        </p>
+        <p>
+          Dá uma olhada nesses quizes incríveis que o pessoal da Imersão Alguma
+          coisa fez:
+        </p>
         <p>
           Dá uma olhada nesses quizes incríveis que o pessoal da Imersão Alguma
           coisa fez:
