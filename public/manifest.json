@@ -1,0 +1,21 @@
+{
+  "name": "Quiz BTS",
+  "short_name": "Quiz BTS",
+  "icons": [
+    {
+      "src": "/img/icon-192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/img/icon-512.png",
+      "type": "image/png",
+      "sizes": "512x454"
+    }
+  ],
+  "background_color": "#0C0B0B",
+  "description": "Quiz BTS é um projeto construido durante a Imersão React edição NextJS da Alura! Teste seus conhecimentos sobre o BTS!",
+  "display": "fullscreen",
+  "start_url": "/",
+  "theme_color": "#130613"
+}
