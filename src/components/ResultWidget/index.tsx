@@ -2,13 +2,12 @@ import React from 'react'
 import Widget from '../Widget'
 
 export interface ComponentProps {
-  title: string
   results: Array<boolean>
 }
 
-const ResultWidget = ({ title, results }: ComponentProps) => {
+const ResultWidget = ({ results }: ComponentProps) => {
   return (
-    <Widget title={title}>
+    <Widget title="Tela de Resultado:">
       <p>Você acertou {results.filter((x) => x).length} perguntas</p>
       <ul>
         {results.map((result, index) => (

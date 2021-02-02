@@ -56,3 +56,8 @@ export const Option = styled.a`
     color: ${({ theme }) => theme.colors.contrastText};
   }
 `
+
+export const IconBlock = styled.div`
+  display: flex;
+  justify-content: center;
+`

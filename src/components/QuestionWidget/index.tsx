@@ -1,5 +1,9 @@
 import React, { useState } from 'react'
+import { Lottie } from '@crello/react-lottie'
+
 import * as S from './styled'
+import successAnimation from './animations/success.json'
+import errorAnimation from './animations/error.json'
 
 import Widget from '../Widget'
 import Button from '../Button'
@@ -48,7 +52,7 @@ const QuestionWidget = ({
       noPadding
     >
       <img
-        alt="Descrição"
+        alt={`Question ${questionIndex + 1}`}
         style={{
           width: '100%',
           height: '150px',
@@ -87,11 +91,42 @@ const QuestionWidget = ({
             )
           })}
 
-          <Button
-            type="submit"
-            text="Confirmar"
-            disabled={!hasAlternativeSelected || isQuestionSubmited}
-          />
+          {!isQuestionSubmited && (
+            <Button
+              type="submit"
+              text="Confirmar"
+              disabled={!hasAlternativeSelected}
+            />
+          )}
+
+          <S.IconBlock>
+            {isQuestionSubmited && isCorrect && (
+              <Lottie
+                width="60px"
+                height="60px"
+                className="lottie-container basic"
+                config={{
+                  animationData: successAnimation,
+                  loop: true,
+                  autoplay: true
+                }}
+              />
+            )}
+
+            {isQuestionSubmited && !isCorrect && (
+              <Lottie
+                width="45px"
+                height="45px"
+                style={{ marginTop: '10px' }}
+                className="lottie-container basic"
+                config={{
+                  animationData: errorAnimation,
+                  loop: true,
+                  autoplay: true
+                }}
+              />
+            )}
+          </S.IconBlock>
         </S.Form>
       </S.Wrapper>
     </Widget>

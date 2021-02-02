@@ -6,8 +6,15 @@ import QuestionWidget from '../../components/QuestionWidget'
 import ResultWidget from '../../components/ResultWidget'
 
 export interface ComponentProps {
-  externalQuestions: any
+  externalQuestions: Array<{
+    image: string
+    title: string
+    description: string
+    answer: number
+    alternatives: Array<string>
+  }>
   externalBg: string
+  externalMobileBg?: string
 }
 
 const screenStates = {
@@ -16,24 +23,23 @@ const screenStates = {
   RESULT: 'RESULT'
 }
 
-const Page = ({ externalQuestions, externalBg }: ComponentProps) => {
+const Page = ({
+  externalQuestions,
+  externalBg,
+  externalMobileBg
+}: ComponentProps) => {
   const [currentQuestion, setCurrentQuestion] = useState(0)
   const [screenState, setScreenState] = useState(screenStates.LOADING)
   const [results, setResults] = useState([])
   const questionIndex = currentQuestion
   const totalQuestions = externalQuestions.length
   const question = externalQuestions[questionIndex]
+  const mobileBackgroundImage = externalMobileBg ? externalMobileBg : externalBg
 
-  // [React chama de: Efeitos || Effects]
-  // React.useEffect
-  // atualizado === willUpdate
-  // morre === willUnmount
   useEffect(() => {
-    // fetch() ...
     setTimeout(() => {
       setScreenState(screenStates.QUIZ)
-    }, 1 * 1000)
-    // nasce === didMount
+    }, 2 * 1000)
   }, [])
 
   const handleSubmitQuiz = () => {
@@ -50,7 +56,10 @@ const Page = ({ externalQuestions, externalBg }: ComponentProps) => {
   }
 
   return (
-    <Layout backgroundImage={externalBg} mobileBackgroundImage={externalBg}>
+    <Layout
+      backgroundImage={externalBg}
+      mobileBackgroundImage={mobileBackgroundImage}
+    >
       {screenState === screenStates.QUIZ && (
         <QuestionWidget
           question={question}
@@ -64,7 +73,7 @@ const Page = ({ externalQuestions, externalBg }: ComponentProps) => {
       {screenState === screenStates.LOADING && <Loading />}
 
       {screenState === screenStates.RESULT && (
-        <ResultWidget title="Tela de Resultado:" results={results} />
+        <ResultWidget results={results} />
       )}
     </Layout>
   )
