@@ -2,7 +2,7 @@ import React from 'react'
 import Head from 'next/head'
 import { ThemeProvider } from 'styled-components'
 import GlobalStyle from '../styles/global'
-import db from '../../configs.json'
+import db from '../../db.json'
 
 const { theme } = db
 

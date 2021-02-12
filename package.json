@@ -20,7 +20,6 @@
   "dependencies": {
     "@crello/react-lottie": "^0.0.11",
     "framer-motion": "^3.3.0-beta.22",
-    "json-server": "^0.16.3",
     "lodash": "^4.17.20",
     "next": "latest",
     "react": "^16.8.0",
