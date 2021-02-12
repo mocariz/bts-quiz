@@ -1,41 +1,8 @@
 {
-  "bg": "https://i.imgur.com/I4DUH2d.png",
-  "bgMobile": "https://i.imgur.com/Jux6cva.png",
-  "title": "BTS Quiz",
-  "description": "Teste os seus conhecimentos sobre o BTS",
-  "questions": [
+  "results": [
     {
-      "image": "https://media.giphy.com/media/xUOxf3yDKCuwpOlT3i/giphy.gif",
-      "title": "Como fazer um seletor por id via CSS?",
-      "description": "Essa é pra aquecer",
-      "answer": 2,
-      "alternatives": [".elemento", "*elemento", "#elemento", "%elemento"]
-    },
-    {
-      "image": "https://media.giphy.com/media/13FrpeVH09Zrb2/giphy.gif",
-      "title": "Como fazer um background gradiente com css?",
-      "description": "Faz tempo em haha",
-      "answer": 0,
-      "alternatives": [
-        "background: linear-gradient(#e66465, #9198e5);",
-        "background: gradient(#e66465, #9198e5);"
-      ]
+      "name": "Mônica",
+      "score": 100
     }
-  ],
-  "external": [
-    "https://aluraquiz-css.omariosouto.vercel.app/",
-    "https://aluraquiz-devsoutinho.omariosouto.vercel.app/"
-  ],
-  "theme": {
-    "colors": {
-      "primary": "#800080",
-      "secondary": "#130613",
-      "mainBg": "#0C0B0B",
-      "contrastText": "#FFFFFF",
-      "option": "#2E0D2E",
-      "wrong": "#CB0000",
-      "success": "#4CAF50"
-    },
-    "borderRadius": "4px"
-  }
+  ]
 }

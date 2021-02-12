@@ -61,7 +61,7 @@ export const Container = styled.div`
   // Large devices (desktops, 992px and up)
   @media (min-width: 992px) {
     .content {
-      height: 90vh;
+      height: 85vh;
       overflow: auto;
       max-width: 360px;
       padding: 0 5px;

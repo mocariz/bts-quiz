@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { useRouter } from 'next/router'
 
-import db from '../../db.json'
+import db from '../../configs.json'
 
 import Layout from '../components/Layout'
 import Widget from '../components/Widget'

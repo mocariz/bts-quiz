@@ -1,7 +1,7 @@
 import React from 'react'
 
 import QuizScreen from '../../screens/Quiz'
-import db from '../../../db.json'
+import db from '../../../configs.json'
 
 const Page = () => {
   return (
