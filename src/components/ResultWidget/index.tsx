@@ -1,17 +1,19 @@
 import React, { useState, useEffect } from 'react'
-import Widget from '../Widget'
-import API from '../../services/api'
 import { useRouter } from 'next/router'
 import { countBy, orderBy } from 'lodash'
-import * as S from './styled'
+import { Lottie } from '@crello/react-lottie'
 
-import { TrophyFill } from '@styled-icons/bootstrap/TrophyFill'
+import * as S from './styled'
+import Widget from '../Widget'
+import API from '../../services/api'
+import loadingAnimation from './trophy.json'
 
 export interface ComponentProps {
   results: Array<boolean>
 }
 
 const ResultWidget = ({ results }: ComponentProps) => {
+  const [loading, setLoading] = useState(true)
   const [data, setData] = useState([])
   const name = useRouter().query.name
   const count = countBy(results, Boolean).true || 0
@@ -21,6 +23,7 @@ const ResultWidget = ({ results }: ComponentProps) => {
     API.getAll()
       .then((resp) => {
         updateResults(resp)
+        saveResult(resp.length)
       })
       .catch((err) => {
         updateResults([])
@@ -36,6 +39,17 @@ const ResultWidget = ({ results }: ComponentProps) => {
         active: true
       }
     ])
+    setLoading(false)
+  }
+
+  const saveResult = (size: number) => {
+    if (name) {
+      API.create({
+        id: size,
+        name: name,
+        score: score
+      })
+    }
   }
 
   const renderTextResult = () => {
@@ -48,8 +62,6 @@ const ResultWidget = ({ results }: ComponentProps) => {
 
   const renderResults = () => {
     if (data.length === 0) return
-
-    console.log(results)
     const orderedData = orderBy(data, ['score'], ['desc', 'asc'])
 
     return (
@@ -71,9 +83,21 @@ const ResultWidget = ({ results }: ComponentProps) => {
 
   return (
     <Widget title="Resultados">
-      <p>Mandou bem {name}!</p>
+      <p>{name} Parabéns por finalizar o quiz!</p>
       <h3>Você fez {renderTextResult()}</h3>
 
+      {loading && (
+        <Lottie
+          width="100%"
+          height="auto"
+          className="lottie-container basic"
+          config={{
+            animationData: loadingAnimation,
+            loop: true,
+            autoplay: true
+          }}
+        />
+      )}
       {renderResults()}
     </Widget>
   )
