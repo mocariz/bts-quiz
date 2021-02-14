@@ -5,20 +5,116 @@
   "description": "Teste os seus conhecimentos sobre o BTS",
   "questions": [
     {
-      "image": "https://media.giphy.com/media/xUOxf3yDKCuwpOlT3i/giphy.gif",
-      "title": "Como fazer um seletor por id via CSS?",
-      "description": "Essa é pra aquecer",
-      "answer": 2,
-      "alternatives": [".elemento", "*elemento", "#elemento", "%elemento"]
+      "image": "https://i.imgur.com/pRX96tp.jpg",
+      "title": "Qual foi o ano que o BTS debutou?",
+      "answer": "2013",
+      "alternatives": ["2014", "2011", "2013", "2012"]
     },
     {
-      "image": "https://media.giphy.com/media/13FrpeVH09Zrb2/giphy.gif",
-      "title": "Como fazer um background gradiente com css?",
-      "description": "Faz tempo em haha",
-      "answer": 0,
+      "image": "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/7744d6d4-4818-434d-9a44-229dd87e1520/d8wvmht-c57ee92b-1967-43db-b2b0-5cc26fabb7cf.png/v1/fill/w_1024,h_684,strp/bts_festa_2015_group_png_by_souqoreans_d8wvmht-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3siaGVpZ2h0IjoiPD02ODQiLCJwYXRoIjoiXC9mXC83NzQ0ZDZkNC00ODE4LTQzNGQtOWE0NC0yMjlkZDg3ZTE1MjBcL2Q4d3ZtaHQtYzU3ZWU5MmItMTk2Ny00M2RiLWIyYjAtNWNjMjZmYWJiN2NmLnBuZyIsIndpZHRoIjoiPD0xMDI0In1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.5d9q5Mp9lBryEyggrPYI-YBg__9xMWTPa0vf8Bk6RqE",
+      "title": "Com qual música o BTS debutou?",
+      "answer": "o More Dream",
       "alternatives": [
-        "background: linear-gradient(#e66465, #9198e5);",
-        "background: gradient(#e66465, #9198e5);"
+        "We Are Bulletproof Pt.2",
+        "Attack on Bangtan",
+        "Boy in luv",
+        "No More Dream",
+        "Dope",
+        "Danger"
+      ]
+    },
+    {
+      "image": "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/b6e1d216-7c53-4e4f-854f-bd725f2acf20/dbb1jg7-58e494f7-a830-4d0c-aec4-6c7573b6264c.jpg/v1/fill/w_900,h_654,q_75,strp/bts_by_glitterage_dbb1jg7-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3sicGF0aCI6IlwvZlwvYjZlMWQyMTYtN2M1My00ZTRmLTg1NGYtYmQ3MjVmMmFjZjIwXC9kYmIxamc3LTU4ZTQ5NGY3LWE4MzAtNGQwYy1hZWM0LTZjNzU3M2I2MjY0Yy5qcGciLCJoZWlnaHQiOiI8PTY1NCIsIndpZHRoIjoiPD05MDAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uud2F0ZXJtYXJrIl0sIndtayI6eyJwYXRoIjoiXC93bVwvYjZlMWQyMTYtN2M1My00ZTRmLTg1NGYtYmQ3MjVmMmFjZjIwXC9nbGl0dGVyYWdlLTQucG5nIiwib3BhY2l0eSI6OTUsInByb3BvcnRpb25zIjowLjQ1LCJncmF2aXR5IjoiY2VudGVyIn19.nTChQ9HW0uGIiHzdPTkAbLiposaDXkxohbBpVqAt6RU",
+      "title": "Quantos membros tem o BTS?",
+      "answer": "7 membros",
+      "alternatives": [
+        "5 membros",
+        "7 membros",
+        "8 membros",
+        "6 membros"
+      ]
+    },
+    {
+      "image": "https://i.imgur.com/keLPuKF.jpg",
+      "title": "Qual o Rap Line do BTS?",
+      "answer": "RM, Suga e J-hope",
+      "alternatives": [
+        "J-hope, Jin, Suga e V",
+        "RM, Suga e J-hope",
+        "RM, Jungkook e Jin",
+        "Jungkook, Jimin, V e Jin"
+      ]
+    },
+    {
+      "image": "https://medias.cnnbrasil.com.br/o-grupo-de-k-pop-bts.jpeg?format=JPEG&image=https://mediastorage.cnnbrasil.com.br/IMAGES/00/00/00/914_F094A54D75FFFDBE.jpg&width=804&height=452&resize=CROP",
+      "title": "Qual é a vocal line?",
+      "answer": "Jungkook, Jin, V e Jimin",
+      "alternatives": [
+        "RM, Suga e J-hope",
+        "V, Suga e Jimin",
+        "Jungkook, Suga, Jin e J-hope",
+        "Jungkook, Jin, V e Jimin"
+      ]
+    },
+    {
+      "image": "https://i.imgur.com/gTZbkhz.jpg",
+      "title": "Qual o nome do Fandom?",
+      "answer": "Army",
+      "alternatives": [
+        "Moa",
+        "Army",
+        "Blink",
+        "Galaxy"
+      ]
+    },
+    {
+      "image": "https://static.billboard.com/files/media/02-BTS-press-Big-Hit-Entertainment-2019-billboard-1548-768x433.jpg",
+      "title": "Quem é o mais velho do grupo?",
+      "answer": "Kim Seokjin",
+      "alternatives": [
+        "Kim Namjoon",
+        "Kim Seokjin",
+        "Min Yoongi",
+        "Jung Hoseok",
+        "Park Jimin",
+        "Kim Taehyung",
+        "Jeon Jungkook"
+      ]
+    },
+    {
+      "image": "https://i0.wp.com/celebmix.com/wp-content/uploads/2018/08/review-bts-love-yourself-answer-a-journey-to-self-love-01.jpg?fit=650%2C433&ssl=1",
+      "title": "Quem é o mais novo do grupo?",
+      "answer": "Jeon Jungkook",
+      "alternatives": [
+        "Kim Namjoon",
+        "Kim Seokjin",
+        "Min Yoongi",
+        "Jung Hoseok",
+        "Park Jimin",
+        "Kim Taehyung",
+        "Jeon Jungkook"
+      ]
+    },
+    {
+      "image": "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/b4e4af57-fc06-48da-9904-9eb35f5f52e3/d9qcast-336176ee-45a2-4e02-9969-ca0362a61e22.jpg/v1/fill/w_1493,h_535,q_70,strp/bts__run__by_renkarts_d9qcast-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3siaGVpZ2h0IjoiPD01NzQiLCJwYXRoIjoiXC9mXC9iNGU0YWY1Ny1mYzA2LTQ4ZGEtOTkwNC05ZWIzNWY1ZjUyZTNcL2Q5cWNhc3QtMzM2MTc2ZWUtNDVhMi00ZTAyLTk5NjktY2EwMzYyYTYxZTIyLmpwZyIsIndpZHRoIjoiPD0xNjAwIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.6OdhGMW3HYPYArhBNaBVUTzcbCsuP5ZVXddJnsgF1Ng",
+      "title": "Qual o nome da empresa em que o BTS trabalha?",
+      "answer": "Bighit Entertainment",
+      "alternatives": [
+        "Bighit Entertainment",
+        "YG Entertainment",
+        "JYP Entertainment",
+        "Starship Entertainment"
+      ]
+    },
+    {
+      "image": "https://i.imgur.com/b8SbX2S.gif",
+      "title": "Quando o nome do fandom foi revelado?",
+      "answer": "09/07/2013",
+      "alternatives": [
+        "09/06/2013",
+        "09/07/2013",
+        "07/09/2013",
+        "13/07/2013"
       ]
     }
   ],

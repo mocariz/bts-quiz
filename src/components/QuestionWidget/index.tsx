@@ -55,8 +55,9 @@ const QuestionWidget = ({
         alt={`Question ${questionIndex + 1}`}
         style={{
           width: '100%',
-          height: '150px',
-          objectFit: 'cover'
+          height: '180px',
+          objectFit: 'cover',
+          objectPosition: 'center'
         }}
         src={question.image}
       />
