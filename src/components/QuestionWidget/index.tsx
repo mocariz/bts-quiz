@@ -51,16 +51,7 @@ const QuestionWidget = ({
       title={`Pergunta ${questionIndex + 1} de ${totalQuestions}`}
       noPadding
     >
-      <img
-        alt={`Question ${questionIndex + 1}`}
-        style={{
-          width: '100%',
-          height: '180px',
-          objectFit: 'cover',
-          objectPosition: 'center'
-        }}
-        src={question.image}
-      />
+      <S.Image alt={`Question ${questionIndex + 1}`} src={question.image} />
       <S.Wrapper>
         <h2>{question.title}</h2>
         <p>{question.description}</p>
@@ -69,7 +60,7 @@ const QuestionWidget = ({
           {question.alternatives.map((alternative, alternativeIndex) => {
             const alternativeId = `alternative__${alternativeIndex}`
             const alternativeStatus = isCorrect ? 'SUCCESS' : 'ERROR'
-            const isSelected = selectedAlternative === alternativeIndex
+            const isSelected = selectedAlternative === alternative
 
             return (
               <S.Option
@@ -85,7 +76,7 @@ const QuestionWidget = ({
                   name={questionId}
                   type="radio"
                   disabled={isQuestionSubmited}
-                  onClick={() => setSelectedAlternative(alternativeIndex)}
+                  onClick={() => setSelectedAlternative(alternative)}
                 />
                 {alternative}
               </S.Option>
