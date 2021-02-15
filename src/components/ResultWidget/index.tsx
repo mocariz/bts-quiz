@@ -15,19 +15,21 @@ export interface ComponentProps {
 const ResultWidget = ({ results }: ComponentProps) => {
   const [loading, setLoading] = useState(true)
   const [data, setData] = useState([])
-  const name = useRouter().query.name
+  const { name, id } = useRouter().query
   const count = countBy(results, Boolean).true || 0
   const score = count * 10
 
   useEffect(() => {
-    API.getAll()
-      .then((resp) => {
-        updateResults(resp)
-        saveResult(resp.length)
-      })
-      .catch((err) => {
-        updateResults([])
-      })
+    if (!id) {
+      API.getAll()
+        .then((resp) => {
+          updateResults(resp)
+          saveResult(resp.length)
+        })
+        .catch((err) => {
+          updateResults([])
+        })
+    }
   }, [])
 
   const updateResults = (resp) => {

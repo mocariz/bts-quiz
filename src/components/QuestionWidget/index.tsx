@@ -55,7 +55,7 @@ const QuestionWidget = ({
       <S.Image alt={`Question ${questionIndex + 1}`} src={question.image} />
       <S.Wrapper>
         <h2>{question.title}</h2>
-        {question.description && <p>{question.description}</p>}
+        <p>{question.description}</p>
 
         <S.Form onSubmit={handleSubmit}>
           {question.alternatives.map((alternative, alternativeIndex) => {
