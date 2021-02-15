@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { Lottie } from '@crello/react-lottie'
+import { isNumber } from 'lodash'
 
 import * as S from './styled'
 import successAnimation from './animations/success.json'
@@ -13,7 +14,7 @@ export interface ComponentProps {
     image: string
     title: string
     description: string
-    answer: number
+    answer: string | number
     alternatives: Array<string>
   }
   questionIndex: number
@@ -60,7 +61,10 @@ const QuestionWidget = ({
           {question.alternatives.map((alternative, alternativeIndex) => {
             const alternativeId = `alternative__${alternativeIndex}`
             const alternativeStatus = isCorrect ? 'SUCCESS' : 'ERROR'
-            const isSelected = selectedAlternative === alternative
+            const answer = isNumber(question.answer)
+              ? alternativeIndex
+              : alternative
+            const isSelected = selectedAlternative === answer
 
             return (
               <S.Option
@@ -76,7 +80,7 @@ const QuestionWidget = ({
                   name={questionId}
                   type="radio"
                   disabled={isQuestionSubmited}
-                  onClick={() => setSelectedAlternative(alternative)}
+                  onClick={() => setSelectedAlternative(answer)}
                 />
                 {alternative}
               </S.Option>

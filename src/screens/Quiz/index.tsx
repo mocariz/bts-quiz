@@ -10,7 +10,7 @@ export interface ComponentProps {
     image: string
     title: string
     description: string
-    answer: number
+    answer: string | number
     alternatives: Array<string>
   }>
   externalBg: string
