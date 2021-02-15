@@ -9,7 +9,7 @@ export interface ComponentProps {
   externalQuestions: Array<{
     image: string
     title: string
-    description: string
+    description?: string
     answer: string | number
     alternatives: Array<string>
   }>

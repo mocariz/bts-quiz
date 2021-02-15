@@ -13,7 +13,7 @@ export interface ComponentProps {
   question: {
     image: string
     title: string
-    description: string
+    description?: string
     answer: string | number
     alternatives: Array<string>
   }
@@ -55,7 +55,7 @@ const QuestionWidget = ({
       <S.Image alt={`Question ${questionIndex + 1}`} src={question.image} />
       <S.Wrapper>
         <h2>{question.title}</h2>
-        <p>{question.description}</p>
+        {question.description && <p>{question.description}</p>}
 
         <S.Form onSubmit={handleSubmit}>
           {question.alternatives.map((alternative, alternativeIndex) => {
